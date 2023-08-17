@@ -7,9 +7,7 @@ from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve, f1_score, 
 from sklearn.metrics import classification_report, ConfusionMatrixDisplay, confusion_matrix
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, GradientBoostingClassifier, RandomForestClassifier
 import joblib
-import json
-import os
-import category_encoders as ce
+
 
 df = pd.read_csv('cleansss_data.csv')
 print(df.columns)

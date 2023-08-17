@@ -1,5 +1,5 @@
-joblib==0.14.1
-streamlit==1.7.0
-scikit-learn==0.23.1
-pandas==1.0.5
+joblib==1.1.0
+streamlit==1.25.0
+scikit-learn==1.1.2
+pandas==1.4.3
 xgboost==1.7.6
