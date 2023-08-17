@@ -16,18 +16,6 @@ print(df.columns)
 
 
 
-# rf_features = [
-# 'Age_Band_1', 'Age_Band_2', 'Age_Band_3',
-# 'Age_Band_4', 'Age_Band_5', 'Age_Band_6',
-# 'AE_Num_Investigations',
-# 'AE_Time_Mins',
-# 'AE_Arrival_Mode',
-# 'AE_HRG_1', 'AE_HRG_2', 'AE_HRG_3', 'AE_HRG_4', 'AE_HRG_5',
-# 'ICD10_Chapter_Code_1', 'ICD10_Chapter_Code_2', 'ICD10_Chapter_Code_3',
-# 'ICD10_Chapter_Code_4', 'ICD10_Chapter_Code_5', 'ICD10_Chapter_Code_6',
-# 'ICD10_Chapter_Code_7', 'ICD10_Chapter_Code_8','Treatment_Function_Code_1', 'Treatment_Function_Code_2',
-# 'Treatment_Function_Code_3', 'Treatment_Function_Code_4',
-# 'Treatment_Function_Code_5', 'Treatment_Function_Code_6']
 
 rf_features = ['AE_Time_Mins',
 'AE_Num_Investigations','AE_Arrival_Mode',
