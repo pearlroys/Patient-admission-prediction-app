@@ -11,28 +11,43 @@ import json
 import os
 import category_encoders as ce
 
-df = pd.read_csv('cleanss_data.csv')
-# df.info()
+df = pd.read_csv('cleansss_data.csv')
+print(df.columns)
 
 
 
-rf_features = [
-'Age_Band_1', 'Age_Band_2', 'Age_Band_3',
-'Age_Band_4', 'Age_Band_5', 'Age_Band_6',
-'AE_Num_Investigations',
-'AE_Time_Mins',
-'AE_Arrival_Mode',
-'AE_HRG_1', 'AE_HRG_2', 'AE_HRG_3', 'AE_HRG_4', 'AE_HRG_5',
-'ICD10_Chapter_Code_1', 'ICD10_Chapter_Code_2', 'ICD10_Chapter_Code_3',
-'ICD10_Chapter_Code_4', 'ICD10_Chapter_Code_5', 'ICD10_Chapter_Code_6',
-'ICD10_Chapter_Code_7', 'ICD10_Chapter_Code_8','Treatment_Function_Code_1', 'Treatment_Function_Code_2',
-'Treatment_Function_Code_3', 'Treatment_Function_Code_4',
-'Treatment_Function_Code_5', 'Treatment_Function_Code_6']
+# rf_features = [
+# 'Age_Band_1', 'Age_Band_2', 'Age_Band_3',
+# 'Age_Band_4', 'Age_Band_5', 'Age_Band_6',
+# 'AE_Num_Investigations',
+# 'AE_Time_Mins',
+# 'AE_Arrival_Mode',
+# 'AE_HRG_1', 'AE_HRG_2', 'AE_HRG_3', 'AE_HRG_4', 'AE_HRG_5',
+# 'ICD10_Chapter_Code_1', 'ICD10_Chapter_Code_2', 'ICD10_Chapter_Code_3',
+# 'ICD10_Chapter_Code_4', 'ICD10_Chapter_Code_5', 'ICD10_Chapter_Code_6',
+# 'ICD10_Chapter_Code_7', 'ICD10_Chapter_Code_8','Treatment_Function_Code_1', 'Treatment_Function_Code_2',
+# 'Treatment_Function_Code_3', 'Treatment_Function_Code_4',
+# 'Treatment_Function_Code_5', 'Treatment_Function_Code_6']
 
+rf_features = ['AE_Time_Mins',
+'AE_Num_Investigations','AE_Arrival_Mode',
+'Age_Band_1-17', 'Age_Band_18-24',
+'Age_Band_25-44', 'Age_Band_45-64', 'Age_Band_65-84', 'Age_Band_85+',
+'AE_HRG_High', 'AE_HRG_Low', 'AE_HRG_Medium', 'AE_HRG_Nothing',
+'AE_HRG_Unknown', 'ICD10_Chapter_Code_IX', 'ICD10_Chapter_Code_Other',
+'ICD10_Chapter_Code_Unknown', 'ICD10_Chapter_Code_X',
+'ICD10_Chapter_Code_XI', 'ICD10_Chapter_Code_XIV',
+'ICD10_Chapter_Code_XIX', 'ICD10_Chapter_Code_XVIII',
+'Treatment_Function_Code_100', 'Treatment_Function_Code_180',
+'Treatment_Function_Code_300', 'Treatment_Function_Code_420',
+'Treatment_Function_Code_OTHER', 'Treatment_Function_Code_Unknown']
 
 X = df[rf_features]
 print(X.isnull().sum())
 y = df['Admitted_Flag']
+# X = df.drop('Admitted_Flag', axis=1)
+# y = df['Admitted_Flag']
+# print(X.columns)
 # Split the data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 rf_model1 = RandomForestClassifier(random_state=42, max_depth = 1, min_samples_leaf = 1, min_samples_split = 2, n_estimators = 100)
