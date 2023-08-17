@@ -1,8 +1,9 @@
 import streamlit as st
 import streamlit as st
-import joblib
+# import joblib
 import pandas as pd
 import numpy as np
+from prediction import predict_admission
 
 
 
@@ -56,17 +57,17 @@ training_columns = ['AE_Time_Mins',
 
 
 
-# Load the trained model
-model = joblib.load('model.joblib')
+# # Load the trained model
+# model = joblib.load('model.joblib')
 
 
 
-# Create a function to predict admission
-def predict_admission(data):
-    data = preprocess_input(data, training_columns)
-    # data_scaled = scaler.transform(data)
-    prediction = model.predict(data)
-    return prediction
+# # Create a function to predict admission
+# def predict_admission(data):
+#     data = preprocess_input(data, training_columns)
+#     # data_scaled = scaler.transform(data)
+#     prediction = model.predict(data)
+#     return prediction
 
 # Create the Streamlit app
 
