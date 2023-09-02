@@ -15,7 +15,7 @@ Welcome to the intersection of data science and healthcare, where I, Pearl, has 
 
 ### The Machine Learning Marvel
 
-At the heart of this project lies the machine learning model(ED orediction.ipynb). I've poured countless hours into its development, optimizing it to make highly accurate predictions based on a myriad of patient data. It's not just a model; it's a testament to the power of technology in healthcare. This section encompasses not only the model but also the crucial pre-processing and training code.
+At the heart of this project lies the machine learning model(ED prediction.ipynb). I've poured countless hours into its development, optimizing it to make highly accurate predictions based on a myriad of patient data. It's not just a model; it's a testament to the power of technology in healthcare. This section encompasses not only the model but also the crucial pre-processing and training code.
 
 ### Streamlit - The User Interface
 
