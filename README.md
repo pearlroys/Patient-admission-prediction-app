@@ -77,7 +77,4 @@ The future is bright for this project:
 Beyond lines of code, this project signifies the potent fusion of technology and healthcare. Its potential to optimize healthcare operations, reduce costs, and, most importantly, save lives is immense. This endeavor is a testament to the transformative impact technology can have on our world.
 
 With unwavering dedication and a vision for a healthier future,
-[Your Name]
-```
-
-Please replace `[Your Name]` with your actual name or any other desired personalization.
+Dr Pearl Roys
